@@ -1,0 +1,6 @@
+framework module Pods_toMoritz {
+  umbrella header "Pods-toMoritz-umbrella.h"
+
+  export *
+  module * { export * }
+}
