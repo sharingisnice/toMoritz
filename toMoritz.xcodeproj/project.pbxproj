@@ -10,10 +10,12 @@
 		D47639FB5B8A446C66F2E117 /* Pods_toMoritz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F50B33A4A815DB892CA9099 /* Pods_toMoritz.framework */; };
 		E2220C33283981A800096429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C32283981A800096429 /* AppDelegate.swift */; };
 		E2220C35283981A800096429 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C34283981A800096429 /* SceneDelegate.swift */; };
-		E2220C37283981A800096429 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C36283981A800096429 /* ViewController.swift */; };
+		E2220C37283981A800096429 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C36283981A800096429 /* HomeViewController.swift */; };
 		E2220C3A283981A800096429 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2220C38283981A800096429 /* Main.storyboard */; };
 		E2220C3C283981AA00096429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2220C3B283981AA00096429 /* Assets.xcassets */; };
 		E2220C3F283981AA00096429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2220C3D283981AA00096429 /* LaunchScreen.storyboard */; };
+		E2220C4B28398C3800096429 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C4A28398C3800096429 /* Account.swift */; };
+		E2220C4D28398CEF00096429 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C4C28398CEF00096429 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +25,13 @@
 		E2220C2F283981A800096429 /* toMoritz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toMoritz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2220C32283981A800096429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2220C34283981A800096429 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E2220C36283981A800096429 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2220C36283981A800096429 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2220C39283981A800096429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2220C3B283981AA00096429 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2220C3E283981AA00096429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2220C40283981AA00096429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2220C4A28398C3800096429 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E2220C4C28398CEF00096429 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				709A03C57464D81250A017B4 /* Pods-toMoritz.debug.xcconfig */,
 				859B1CE06988CC0ACFD9D7F1 /* Pods-toMoritz.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,49 @@
 		E2220C31283981A800096429 /* toMoritz */ = {
 			isa = PBXGroup;
 			children = (
+				E2220C49283984A400096429 /* Storyboards */,
+				E2220C482839848F00096429 /* ViewControllers */,
+				E2220C472839848900096429 /* ViewModel */,
+				E2220C462839848100096429 /* Model */,
 				E2220C32283981A800096429 /* AppDelegate.swift */,
 				E2220C34283981A800096429 /* SceneDelegate.swift */,
-				E2220C36283981A800096429 /* ViewController.swift */,
-				E2220C38283981A800096429 /* Main.storyboard */,
 				E2220C3B283981AA00096429 /* Assets.xcassets */,
-				E2220C3D283981AA00096429 /* LaunchScreen.storyboard */,
 				E2220C40283981AA00096429 /* Info.plist */,
 			);
 			path = toMoritz;
+			sourceTree = "<group>";
+		};
+		E2220C462839848100096429 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2220C4A28398C3800096429 /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2220C472839848900096429 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2220C4C28398CEF00096429 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E2220C482839848F00096429 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2220C36283981A800096429 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2220C49283984A400096429 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E2220C38283981A800096429 /* Main.storyboard */,
+				E2220C3D283981AA00096429 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2220C37283981A800096429 /* ViewController.swift in Sources */,
+				E2220C4D28398CEF00096429 /* HomeViewModel.swift in Sources */,
+				E2220C37283981A800096429 /* HomeViewController.swift in Sources */,
+				E2220C4B28398C3800096429 /* Account.swift in Sources */,
 				E2220C33283981A800096429 /* AppDelegate.swift in Sources */,
 				E2220C35283981A800096429 /* SceneDelegate.swift in Sources */,
 			);

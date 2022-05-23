@@ -7,5 +7,6 @@ target 'toMoritz' do
 
   # Pods for toMoritz
   pod 'RxSwift'
+  pod 'RxCocoa'
 
 end
