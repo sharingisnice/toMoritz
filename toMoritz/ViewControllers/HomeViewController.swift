@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
-        
     }
     
     
@@ -33,9 +32,7 @@ class HomeViewController: UIViewController {
             .subscribe ({ [weak self] text in
                 print(text)
                 self?.checkText(text: self?.eosSearchField.text ?? "")
-                
             }).disposed(by: disposeBag)
-        
     }
     
     
@@ -52,7 +49,6 @@ class HomeViewController: UIViewController {
         
         viewModel.makeRequest(accountName: accountName, withURLString: "\(protocolVar)://\(host):\(port)/v1/chain/get_account")
     }
-    
     
 }
 
