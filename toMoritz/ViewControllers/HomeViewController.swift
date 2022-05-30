@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
+        
+        
     }
     
     
@@ -35,6 +37,14 @@ class HomeViewController: UIViewController {
                 
             }
        
+    }
+    
+    func makeRequest(accountName: String) {
+        let protocolVar = "I have no idea"
+        let host = "still no idea"
+        let port = "nope"
+        
+        viewModel.makeRequest(accountName: accountName, withURLString: "\(protocolVar)://\(host):\(port)/v1/chain/get_account")
     }
     
     

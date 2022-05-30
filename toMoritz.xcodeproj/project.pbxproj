@@ -16,6 +16,7 @@
 		E2220C3F283981AA00096429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2220C3D283981AA00096429 /* LaunchScreen.storyboard */; };
 		E2220C4B28398C3800096429 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C4A28398C3800096429 /* Account.swift */; };
 		E2220C4D28398CEF00096429 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2220C4C28398CEF00096429 /* HomeViewModel.swift */; };
+		E27D362A284455C600697B90 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27D3629284455C600697B90 /* NetworkHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E2220C40283981AA00096429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2220C4A28398C3800096429 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		E2220C4C28398CEF00096429 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E27D3629284455C600697B90 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		E2220C31283981A800096429 /* toMoritz */ = {
 			isa = PBXGroup;
 			children = (
+				E27D3628284455AD00697B90 /* Helpers */,
 				E2220C49283984A400096429 /* Storyboards */,
 				E2220C482839848F00096429 /* ViewControllers */,
 				E2220C472839848900096429 /* ViewModel */,
@@ -127,6 +130,14 @@
 				E2220C3D283981AA00096429 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E27D3628284455AD00697B90 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E27D3629284455C600697B90 /* NetworkHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +259,7 @@
 				E2220C37283981A800096429 /* HomeViewController.swift in Sources */,
 				E2220C4B28398C3800096429 /* Account.swift in Sources */,
 				E2220C33283981A800096429 /* AppDelegate.swift in Sources */,
+				E27D362A284455C600697B90 /* NetworkHelper.swift in Sources */,
 				E2220C35283981A800096429 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

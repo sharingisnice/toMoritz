@@ -14,6 +14,10 @@ class HomeViewModel {
     var accountName = ""
     var infoArray = [String]()
     
+    let networkHelper = NetworkHelper()
+    
+    var returnedData : Account?
+
     
     func isAccountNameValid(name: String) -> Bool {
         let regex = try! NSRegularExpression(pattern: "[a-z1-5.]{1,12}")
@@ -24,24 +28,12 @@ class HomeViewModel {
     
     
     
-    func makeRequest() {
+    func makeRequest(accountName:String ,withURLString: String) -> Observable<Account> {
         
-        if let url = URL(string: "") {
-            let req = URLRequest(url: url)
-        
-            let response = URLSession.shared.rx.json(request: req)
-            
-            URLSession.shared.rx.response(request: req)
-                .flatMap { response, data in
-                    if let response = response as? HTTPURLResponse {
-                        
-                    }
-                }
-            
-            
+        return Observable.create { osberver -> Disposable in
+            self.networkHelper.post(params: ["account_name":accountName], url: withURLString)
+            return "val" as! Disposable
         }
-        
-        
         
     }
     
