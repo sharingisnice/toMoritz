@@ -12,6 +12,7 @@ import RxCocoa
 class HomeViewController: UIViewController {
     
     let viewModel = HomeViewModel()
+    let disposeBag = DisposeBag()
     
     @IBOutlet weak var eosSearchField: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -22,21 +23,26 @@ class HomeViewController: UIViewController {
         
         setUI()
         
-        
     }
     
     
     func setUI() {
         tableView.dataSource = self
-        eosSearchField.delegate = self
         
-        eosSearchField.rx.controlEvent(.editingChanged)
-            .withLatestFrom(eosSearchField.rx.text.orEmpty)
-            .subscribe { text in
+        eosSearchField.rx.controlEvent(.editingChanged).asObservable()
+            .subscribe ({ [weak self] text in
                 print(text)
+                self?.checkText(text: self?.eosSearchField.text ?? "")
                 
-            }
-       
+            }).disposed(by: disposeBag)
+        
+    }
+    
+    
+    func checkText(text: String) {
+        if text.count == 12 {
+            makeRequest(accountName: text)
+        }
     }
     
     func makeRequest(accountName: String) {
